@@ -1,0 +1,7 @@
+{
+  "name": "snsapp",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

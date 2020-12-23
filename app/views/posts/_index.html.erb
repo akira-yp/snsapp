@@ -1,0 +1,14 @@
+<div>
+  <% @posts.each do |post| %>
+    <div class="log_table">
+      <div>
+        <p><%= post.content %></p>
+      </div>
+      <div class="">
+        <span><%= post.created_at %></span>
+        <span><%= link_to "編集", edit_post_path(post.id) %></span>
+        <span><%= link_to "削除", post_path(post.id), method: :delete %></span>
+      </div>
+    </div>
+  <% end %>
+</div>
