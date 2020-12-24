@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :get_all_posts, only:[:index,:create,:edit,:update]
+  before_action :set_all_posts, only:[:index,:create,:edit,:update]
   before_action :set_post, only:[:edit,:update,:destroy]
   def index
     @post = Post.new
@@ -26,12 +26,13 @@ class PostsController < ApplicationController
     redirect_to posts_path, notice:"メッセージを削除しました！"
   end
   def confirm
+    @post = Post.new(post_params)
   end
   private
   def post_params
-    params.require(:post).permit(:content,:created_at)
+    params.require(:post).permit(:content, :created_at)
   end
-  def get_all_posts
+  def set_all_posts
     @posts = Post.all
   end
   def set_post
