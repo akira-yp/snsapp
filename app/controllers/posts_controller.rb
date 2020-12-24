@@ -6,10 +6,14 @@ class PostsController < ApplicationController
   end
   def create
     @post = Post.new(post_params)
-    if @post.save
-      redirect_to posts_path, notice:"メッセージを投稿しました！"
-    else
+    if params[:back]
       render :index
+    else
+      if @post.save
+        redirect_to posts_path, notice:"メッセージを投稿しました！"
+      else
+        render :index
+      end
     end
   end
   def edit
