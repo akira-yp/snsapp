@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_all_posts, only:[:index,:create,:edit,:update]
+  before_action :set_all_posts, only:[:index,:create,:edit,:update,:confirm]
   before_action :set_post, only:[:edit,:update,:destroy]
   def index
     @post = Post.new
