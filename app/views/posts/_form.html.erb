@@ -1,3 +1,4 @@
+<div class='log_table'>
 <%= form_with(model:@post, url:choose_index_or_edit, local:true) do |form| %>
   <% if @post.errors.any? %>
   <div>
@@ -9,9 +10,10 @@
   </div>
   <% end %>
   <div class="">
-    <%= form.text_field :content %>
+    <%= form.text_area :content, placeholder:"今どうしてる？" %>
   </div>
-  <div class="">
-    <%= form.submit "投稿" %>
+  <div class="align_right">
+    <%= form.submit " つぶやく ", class:"submit_btn" %>
   </div>
 <% end %>
+</div>
