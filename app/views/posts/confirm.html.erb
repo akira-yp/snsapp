@@ -1,16 +1,13 @@
 <div>
-  <div class="">
-    <h1>こちらの内容で投稿しますか？</h1>
-  </div>
   <div class="log_table">
     <%= form_with(model:@post, local:true) do |form| %>
     <div class="">
       <%= form.hidden_field :content %>
       <p><%= @post.content %></p>
     </div>
-    <div class="">
-      <%= form.submit "投稿する" %>
-      <%= form.submit "戻る", name:'back' %>
+    <div class="align_right">
+      <%= form.submit "つぶやく" , class:'small_btn' %>
+      <%= form.submit "やっぱりやめる", name:'back' , class:'small_btn'%>
     </div>
     <% end %>
   </div>

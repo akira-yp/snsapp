@@ -10,7 +10,7 @@ class PostsController < ApplicationController
       render :index
     else
       if @post.save
-        redirect_to posts_path, notice:"メッセージを投稿しました！"
+        redirect_to posts_path, notice:"つぶやきました"
       else
         render :index
       end
@@ -20,14 +20,14 @@ class PostsController < ApplicationController
   end
   def update
     if @post.update(post_params)
-      redirect_to posts_path, notice:"メッセージを更新しました！"
+      redirect_to posts_path, notice:"つぶやきを変えました"
     else
       render :edit
     end
   end
   def destroy
     @post.destroy
-    redirect_to posts_path, notice:"メッセージを削除しました！"
+    redirect_to posts_path, notice:"つぶやきをなかったことにしました"
   end
   def confirm
     @post = Post.new(post_params)
