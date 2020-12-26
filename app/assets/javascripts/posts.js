@@ -1,5 +1,4 @@
 $(function(){
-  // $('#post_content').keyup(function(){
     $(document).on('keyup','#post_content',function(){
     let count = $(this).val().length;
     let $submit = $('.submit_btn');
