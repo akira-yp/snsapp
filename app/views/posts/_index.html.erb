@@ -6,8 +6,8 @@
       </div>
       <div class="align_right">
         <span><%= post.created_at %></span>
-        <span><%= link_to "EDIT", edit_post_path(post.id),class:"submit_btn small_btn"  %></span>
-        <span><%= link_to "DERETE", post_path(post.id), method: :delete, class:"submit_btn small_btn" %></span>
+        <span><%= link_to "EDIT", edit_post_path(post.id),class:"small_btn"  %></span>
+        <span><%= link_to "DERETE", post_path(post.id), method: :delete, class:"small_btn" %></span>
       </div>
     </div>
   <% end %>

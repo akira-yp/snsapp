@@ -49,11 +49,23 @@ header{
 
  .submit_btn{
    color: #ffffff;
-   background-color: #1fa2f2;
+   background-color: #9bd1f9;
    border-radius: 15px;
    padding-left: 10px;
    padding-right: 10px;
  }
+
+ .no_click{
+   pointer-events: none;
+ }
+
+.small_btn{
+  color: #ffffff;
+  background-color: #1fa2f2;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
  .small_btn:hover{
    background-color: #9bd1f9;
