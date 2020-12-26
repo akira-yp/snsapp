@@ -38,7 +38,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:content, :created_at)
   end
   def set_all_posts
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
   def set_post
     @post = Post.find(params[:id])
