@@ -1,12 +1,14 @@
-$(function(){
-  $('#post_content').keyup(function(){
-    var count = $(this).val().length;
-    if( count >= 0 || count <= 140 ){
-      $('.submit_btn').css('background-color':'#ffffff')
-    }else{
-      $('.submit_btn').css('background-color':'#9bd1f9')
-    };
-  });
-});
-
-pointer-events: none;
+// $(function(){
+//   $('#post_content').keyup(function(){
+//     let count = $(this).val().length;
+//     let $submit = $('.submit_btn')
+//     $('.count_letters').text(count);
+//     if( count >= 1 && count <= 140 ){
+//       $submit.css('background-color','#1fa2f2');
+//       $submit.removeClass('no_click');
+//     } else {
+//       $submit.css('background-color','#9bd1f9');
+//       $submit.addClass('no_click');
+//     };
+//   });
+// });
